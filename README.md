@@ -1,7 +1,7 @@
-# Chrome Addon v3 Skeleton
-The code you will find in this repository is the skeleton of an Chrome/Chromium extension using the new manifest v3.
+# Chrome Addon v3 Starter
+This repository contains the minimal amount of boilerplate code needed to start developing a Chrome/Chromium extension that uses the newest version of the manifest (v3).
 
-If you have tried to create such an extension or to transform an old v2 extension, you will now that the current documentation is not extremely clear about everything.
+If you tried to create such an extension or to port a v2 extension to v3, you know that the current documentation is lacking some crucial information.
 This repository will help you jumpstart the creation of your extension, or give you more insights about how to turn you v2 extension into a working v3 one.
 
 ## Installation
@@ -10,7 +10,7 @@ This repository will help you jumpstart the creation of your extension, or give 
 - If you did not do it already, toggle the "developer mode". This is usually a toggle at the top right of the extensions page.
 - Click the button "load unpacked extension"
 - In the window that pops up, select the folder that contains this repo, then click ok
-- A new extension called "Chrome Addon v3 Skeleton" should have appeared in the list
+- A new extension called "Chrome Addon v3 Starter" should have appeared in the list
 
 ## Q&A
 > Does this work only on Chrome or on other web browsers as well?

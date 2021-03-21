@@ -1,11 +1,11 @@
 {
     "manifest_version": 3,
-    "name": "Chrome Addon v3 Skeleton",
-    "description": "A working skeleton of a chrome extension that uses manifest v3",
+    "name": "Chrome Addon v3 Starter",
+    "description": "A minimal example of a chrome extension using manifest v3",
     "version": "0.0.1",
     "options_page": "settings/settings.html",
     "action": {
-        "default_title": "Chrome Addon v3 Skeleton",
+        "default_title": "Chrome Addon v3 Starter",
         "default_popup": "popup/popup.html"
     },
     "permissions": [],
