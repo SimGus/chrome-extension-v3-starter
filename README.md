@@ -1,20 +1,21 @@
 # Chrome Addon v3 Starter
-This repository contains the minimal amount of boilerplate code needed to start developing a Chrome/Chromium extension that uses the newest version of the manifest (v3).
+This repository contains the minimal boilerplate code needed to start developing a chrome/chromium extension that uses the newest version of the manifest (v3).
+In other words, this is a **working "v3" extension** that does nothing but **can be installed and modified** to create a real extension.
 
 If you tried to create such an extension or to port a v2 extension to v3, you know that the current documentation is lacking some crucial information.
 This repository will help you jumpstart the creation of your extension, or give you more insights about how to turn you v2 extension into a working v3 one.
 
 ## Installation
-- Clone this repo anywhere on your computer
-- Open [the extensions page](chrome://extensions) in your browser: chrome://extensions
+- Clone this repo anywhere on your computer.
+- Open [the extensions page](chrome://extensions) in your browser: chrome://extensions. This link works on any chromium-based browser.
 - If you did not do it already, toggle the "developer mode". This is usually a toggle at the top right of the extensions page.
-- Click the button "load unpacked extension"
-- In the window that pops up, select the folder that contains this repo, then click ok
-- A new extension called "Chrome Addon v3 Starter" should have appeared in the list
+- Click the button "load unpacked extension".
+- In the window that pops up, select the folder that contains this repo, then click ok.
+- A new extension called "Chrome Addon v3 Starter" should have appeared in the list.
 
 ## Q&A
 > Does this work only on Chrome or on other web browsers as well?
-At the moment, this works on every Chromium-based web browser that supports v3 extensions.
+At the moment, this works on every chromium-based web browser that supports v3 extensions.
 Therefore, you should be able to install this extension on any of the following browsers (as long as they are up-to-date):
 - Chrome
 - Chromium
