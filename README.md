@@ -13,7 +13,7 @@ In other words, this is a **working, installable v3 extension** meant for you to
 
 
 ## Installation
-- **Clone** this repo.
+- **Fork** this repo, then **clone your forked repo locally**. If you don't have a github account, you can simply download a zip of the repo and unzip it on your computer.
 - **Open [the extensions page](chrome://extensions)** in your browser: `chrome://extensions`. This link works on any chromium-based browser.
 - If you did not do it already, **toggle the "developer mode"**. This is usually a toggle button at the top right of the extensions page.
 - Click the button **_load unpacked extension_**.
@@ -69,6 +69,19 @@ You should read the [official migration page (v2 to v3)](https://developer.chrom
   There should be a card with the name of this extension as title.
   If you don't see such a card, it means the extension is not installed.
 - Simply click the _Delete_ button at the bottom of the card. Click _ok_ if a popup asks you for confirmation. The extension is now uninstalled.
+
+> I want to **push my changes to my own repo**, how do I do this?
+
+- If you forked this repo and cloned your own fork locally, git will push to your fork on your account automatically (i.e. use the command `git push` or `git push origin <your-branch>`).
+
+- If you downloaded a zip or simply cloned this repo locally, do the following:
+    - Create a github account if you don't already have one and install git on your machine.
+    - Create a new (empty) repo on your github and copy its url.
+    - Open a terminal in the folder where the extension is cloned.
+    - Run the command `git init`, then `git commit -am "Initial commit"`
+    - Run the command `git remote add origin <url-of-your-repo>`
+    - Run `git push -u origin master`. The extension code is now on your repo, on brnach _master_.
+    - If you want, you can make the _master_ branch the default one and delete the _main_ branch in the settings of your repo.
 
 ## External resources
 - [Official feature summary for manifest v3](https://developer.chrome.com/docs/extensions/mv3/intro/mv3-overview/)
