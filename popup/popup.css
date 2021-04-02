@@ -1,6 +1,9 @@
 body {
     background-color: #222;
     color: #eee;
+
+    width: 16rem;
+    height: 4rem;
 }
 
 .special-text {
