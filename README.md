@@ -63,6 +63,17 @@ Most of what you will find in those tutorials still holds with v3.
 However, a few things (notably best practices) have changed.
 You should read the [official migration page (v2 to v3)](https://developer.chrome.com/docs/extensions/mv3/intro/mv3-migration/) before following such a tutorial.
 
+> When I make an erroneous change in my service worker, the extension doesn't load! How can I **debug a service worker**?
+
+Using the debugger if your service worker is not loaded is not possible.
+
+However, if you want to test some piece of code before putting it in your service worker, you can:
+- load your extension with a working version of the service worker.
+- click on "service worker" on the page _chrome://extensions_. This will open the console attached to the service worker.
+- paste your code in the console and see if any error is logged.
+
+Note that in this console, you have access to anything your service worker has access to, including its variables, functions and chrome APIs.
+
 > How do I **uninstall** this extension from my browser?
 
 - Go to the [extensions page](chrome://extensions): chrome://extensions.
