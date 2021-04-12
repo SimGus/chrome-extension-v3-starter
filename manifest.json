@@ -1,4 +1,5 @@
 {
+    // Comments are accepted in the manifest, even though it is JSON.
     "manifest_version": 3,
     "name": "Chrome Addon v3 Starter",
     "description": "A minimal example of a chrome extension using manifest v3",
