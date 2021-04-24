@@ -9,7 +9,7 @@ This repository contains a minimal Chrome/Chromium extension that uses the newes
 You can use it as a basis to develop an extension.
 It can also give you more insights about how to turn a v2 extension to v3.
 
-In other words, this is a **working, installable v3 extension** meant for you to **jumpstart** the development of your own extension.
+In other words, this is a **working, installable v3 extension** example meant for you to **jumpstart** the development of your own extension.
 
 
 ## Installation
