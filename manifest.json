@@ -1,5 +1,5 @@
 {
-    "manifest_version": 3,
+    "manifest_version": 2,
     "name": "Chrome Extension v3 Starter",
     "description": "A minimal example of a chrome extension using manifest v3",
     "version": "0.0.1",
@@ -9,21 +9,25 @@
         "128": "logo/logo-128.png"
     },
     "options_page": "settings/settings.html",
-    "action": {
+    "browser_action": {
         "default_title": "Chrome Addon v3 Starter",
         "default_popup": "popup/popup.html"
     },
     "permissions": [],
-    "host_permissions": [
+    "optional_permissions": [
         "*://*/*"
     ],
     "background": {
-        "service_worker": "service-worker.js"
+        "scripts": ["service-worker.js"],
+        "persistent": true
     },
     "content_scripts": [
         {
           "matches": [
             "https://*/*", "http://localhost/*", "http://127.0.0.1/*"
+          ],
+          "exclude_matches": [
+            "https://docs.google.com/*"
           ],
           "all_frames": true,
           "js": [
