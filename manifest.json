@@ -22,7 +22,9 @@
         "service_worker": "service-worker.js"
     },
     "content_scripts": [{
+        "css": ["foreground.css"],
         "js": ["foreground.js"],
-        "matches": ["https://github.com/*"]
+        "matches": ["https://*.eater.com/maps/*"],
+        "run_at": "document_end"
     }]
 }

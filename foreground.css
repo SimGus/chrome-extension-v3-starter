@@ -1,0 +1,8 @@
+#add-to-google-maps-button {
+    position: fixed;
+    z-index: 100000000;
+    bottom: 20px;
+    right: 20px;
+    background-color: #D3D3D3;
+    padding: 8px;
+}
