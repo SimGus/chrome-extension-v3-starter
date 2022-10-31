@@ -1,8 +1,8 @@
 {
     // Comments are accepted in the manifest, even though it is JSON.
     "manifest_version": 3,
-    "name": "Chrome Extension v3 Starter",
-    "description": "A minimal example of a chrome extension using manifest v3",
+    "name": "Eater to Google Maps",
+    "description": "A Chrome extension to easily add Eater lists to your Google Maps starred places",
     "version": "0.0.1",
     "icons": {
         "16": "logo/logo-16.png",
@@ -11,10 +11,10 @@
     },
     "options_page": "settings/settings.html",
     "action": {
-        "default_title": "Chrome Addon v3 Starter",
+        "default_title": "Eater to Google Maps",
         "default_popup": "popup/popup.html"
     },
-    "permissions": [],
+    "permissions": ["storage", "tabs", "unlimitedStorage", "webRequest"],
     "host_permissions": [
         "*://*/*"
     ],
@@ -26,5 +26,10 @@
         "js": ["foreground.js"],
         "matches": ["https://*.eater.com/maps/*"],
         "run_at": "document_end"
+    },
+    {
+        "js": ["createMapsList.js"],
+        "matches": ["https://www.google.com/maps/*/data=!4m2!10m1!1e1"],
+        "run_at": "document_start"
     }]
 }

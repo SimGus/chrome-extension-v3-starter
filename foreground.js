@@ -13,13 +13,26 @@ document.body.appendChild(button);
 button.innerHTML = "Add list to Google Maps";
 button.id = "add-to-google-maps-button";
 
-button.addEventListener("click", () => {
+let articleTitle = document.querySelector('#content > section:nth-child(1) > div.c-mapstack__lede-image > div.c-mapstack__headline-wrap > div > h1').innerHTML
+
+button.addEventListener("click", async () => {
     const listContainer = document.getElementById("content");
-    console.log(listContainer);
     const googleMapsLinks = listContainer.querySelectorAll("a.p-button[href^='https://www.google.com/maps/search/']");
-    console.log(googleMapsLinks);
-    
-    googleMapsLinks.forEach((link) => {
-        link.click();
+    const googleMapsLinkURLs = Array.from(googleMapsLinks).map((link) => {
+        return link.href;
     })
+    const articleTitle = document.querySelector('#content > section:nth-child(1) > div.c-mapstack__lede-image > div.c-mapstack__headline-wrap > div > h1').innerHTML
+
+    const localStorageDict = {
+        [articleTitle]: [
+            googleMapsLinkURLs
+        ]
+    }
+    
+    chrome.storage.local.set({"eaterToGoogleMapsList": JSON.stringify(localStorageDict)})
+
+    console.log("sendMessage");
+    chrome.runtime.sendMessage({
+        message: "addListToGoogleMaps"
+    });
 });
