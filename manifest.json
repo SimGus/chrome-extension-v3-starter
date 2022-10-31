@@ -31,5 +31,10 @@
         "js": ["createMapsList.js"],
         "matches": ["https://www.google.com/maps/*/data=!4m2!10m1!1e1"],
         "run_at": "document_start"
+    },
+    {
+        "js": ["addPlaceToList.js"],
+        "matches": ["https://www.google.com/maps/search/*"],
+        "run_at": "document_start"
     }]
 }

@@ -13,19 +13,46 @@ importScripts('service-worker-utils.js')
 
 chrome.runtime.onMessage.addListener(
     async (message, sender, sendResponse) => {
-        if (message.message === "addListToGoogleMaps") {
-            console.log("adding list to Google maps");
-            const localStorageDict = await chrome.storage.local.get("eaterToGoogleMapsList");
-            console.log("localStorageDict", localStorageDict);
-            const stringifiedStoredDict = localStorageDict["eaterToGoogleMapsList"];
-            console.log("stringifiedStoredDict", stringifiedStoredDict)
-            const storedDict = JSON.parse(stringifiedStoredDict);
-            console.log("storedDict", storedDict);
+        console.log("adding list to Google maps");
+        const localStorageDict = await chrome.storage.local.get("eaterToGoogleMapsList");
+        console.log("localStorageDict", localStorageDict);
+        const stringifiedStoredDict = localStorageDict["eaterToGoogleMapsList"];
+        console.log("stringifiedStoredDict", stringifiedStoredDict)
+        const storedDict = JSON.parse(stringifiedStoredDict);
+        console.log("storedDict", storedDict);
 
+        const LIST_TO_CREATE = await chrome.storage.local.get("LIST_TO_CREATE");
+        const eaterToGoogleMapsList = await chrome.storage.local.get("eaterToGoogleMapsList");
+
+        console.log("LIST_TO_CREATE", LIST_TO_CREATE);
+        console.log("eaterToGoogleMapsList", eaterToGoogleMapsList);
+
+
+        if (message.message === "addListToGoogleMaps") {
             chrome.storage.local.set({"LIST_TO_CREATE": Object.keys(storedDict)[0]})
             chrome.tabs.create({url: "https://www.google.com/maps/@40.7271164,-73.994756,15z/data=!4m2!10m1!1e1"})
         } else if (message.message === "addPlacesToList") {
             console.log("adding places to list");
+
+            const links = Object.values(storedDict)[0];
+            console.log("links", links)
+
+            links.forEach((link, index) => {
+                setTimeout(() => {
+                    chrome.tabs.create({url: link})
+                    if (index === links.length - 1) {
+                        setTimeout(async () => {
+                            chrome.storage.local.remove(["LIST_TO_CREATE", "eaterToGoogleMapsList"]);
+
+                            const LIST_TO_CREATE = await chrome.storage.local.get("LIST_TO_CREATE");
+                            const eaterToGoogleMapsList = await chrome.storage.local.get("eaterToGoogleMapsList");
+                    
+                            console.log("LIST_TO_CREATE", LIST_TO_CREATE);
+                            console.log("eaterToGoogleMapsList", eaterToGoogleMapsList);
+                        }, 5000);
+                    }
+                }, index * 5000)
+            })
         }
     }
 )

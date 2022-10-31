@@ -22,9 +22,11 @@ window.addEventListener('load', async (event) => {
                 createButton.disabled = false;
                 createButton.click();
 
-                chrome.runtime.sendMessage({
-                    message: "addPlacesToList"
-                });
+                setTimeout(() => {
+                    chrome.runtime.sendMessage({
+                        message: "addPlacesToList"
+                    });
+                }, 2000);
             }, 500)
         }, 1000)
     }

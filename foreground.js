@@ -24,9 +24,7 @@ button.addEventListener("click", async () => {
     const articleTitle = document.querySelector('#content > section:nth-child(1) > div.c-mapstack__lede-image > div.c-mapstack__headline-wrap > div > h1').innerHTML
 
     const localStorageDict = {
-        [articleTitle]: [
-            googleMapsLinkURLs
-        ]
+        [articleTitle]: googleMapsLinkURLs
     }
     
     chrome.storage.local.set({"eaterToGoogleMapsList": JSON.stringify(localStorageDict)})
