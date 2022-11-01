@@ -14,9 +14,7 @@
         "default_popup": "popup/popup.html"
     },
     "permissions": ["storage", "tabs"],
-    "host_permissions": [
-        "*://*/*"
-    ],
+    "host_permissions": [],
     "background": {
         "service_worker": "background/service-worker.js"
     },
