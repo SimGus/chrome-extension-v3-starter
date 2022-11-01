@@ -2,38 +2,38 @@
     // Comments are accepted in the manifest, even though it is JSON.
     "manifest_version": 3,
     "name": "Eater to Google Maps",
-    "description": "A Chrome extension to easily add Eater lists to your Google Maps starred places",
+    "description": "A Chrome extension to easily add Eater lists to your Google Maps saved places",
     "version": "0.0.1",
     "icons": {
-        "16": "logo/logo-16.png",
-        "48": "logo/logo-48.png",
-        "128": "logo/logo-128.png"
+        "16": "logo/hamburger-logo-16.png",
+        "48": "logo/hamburger-logo-48.png",
+        "128": "logo/hamburger-logo-128.png"
     },
     "options_page": "settings/settings.html",
     "action": {
         "default_title": "Eater to Google Maps",
         "default_popup": "popup/popup.html"
     },
-    "permissions": ["storage", "tabs", "unlimitedStorage", "webRequest"],
+    "permissions": ["storage", "tabs"],
     "host_permissions": [
         "*://*/*"
     ],
     "background": {
-        "service_worker": "service-worker.js"
+        "service_worker": "background/service-worker.js"
     },
     "content_scripts": [{
-        "css": ["foreground.css"],
-        "js": ["foreground.js"],
+        "css": ["pageScripts/parseEaterListData.css"],
+        "js": ["pageScripts/parseEaterListData.js"],
         "matches": ["https://*.eater.com/maps/*"],
         "run_at": "document_end"
     },
     {
-        "js": ["createMapsList.js"],
+        "js": ["pageScripts/createMapsList.js"],
         "matches": ["https://www.google.com/maps/*/data=!4m2!10m1!1e1"],
         "run_at": "document_start"
     },
     {
-        "js": ["addPlaceToList.js"],
+        "js": ["pageScripts/addPlaceToList.js"],
         "matches": ["https://www.google.com/maps/search/*"],
         "run_at": "document_start"
     }]
