@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "Eater to Google Maps",
     "description": "A Chrome extension to easily add Eater lists to your Google Maps saved places",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "icons": {
         "16": "logo/hamburger-logo-16.png",
         "48": "logo/hamburger-logo-48.png",
@@ -14,6 +14,7 @@
         "default_popup": "popup/popup.html"
     },
     "permissions": ["storage", "tabs"],
+    "host_permissions": [],
     "background": {
         "service_worker": "background/service-worker.js"
     },
