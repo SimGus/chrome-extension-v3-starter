@@ -33,3 +33,7 @@ It reads the name of the Eater article from chrome storage and creates a new lis
 This file runs on any page that matches `google.com/maps/search/*`, which display places on the Eater list. 
 
 It handles the logic of clicking on the "Save" button, adding the place to the right list, and then sends a message to notify the service worker to move on to the next place on the list.
+
+## Thanks
+
+Special thanks to [SimGus](https://github.com/SimGus)'s [chrome-extension-v3-starter](https://github.com/SimGus/chrome-extension-v3-starter) repo for providing a template!
