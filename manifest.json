@@ -1,5 +1,4 @@
 {
-    // Comments are accepted in the manifest, even though it is JSON.
     "manifest_version": 3,
     "name": "Eater to Google Maps",
     "description": "A Chrome extension to easily add Eater lists to your Google Maps saved places",
