@@ -21,18 +21,18 @@
         "service_worker": "background/service-worker.js"
     },
     "content_scripts": [{
-        "css": ["pageScripts/parseEaterListData.css"],
-        "js": ["pageScripts/parseEaterListData.js"],
+        "css": ["contentScripts/parseEaterListData.css"],
+        "js": ["contentScripts/parseEaterListData.js"],
         "matches": ["https://*.eater.com/maps/*"],
         "run_at": "document_end"
     },
     {
-        "js": ["pageScripts/createMapsList.js"],
+        "js": ["contentScripts/createMapsList.js"],
         "matches": ["https://www.google.com/maps/*/data=!4m2!10m1!1e1"],
         "run_at": "document_start"
     },
     {
-        "js": ["pageScripts/addPlaceToList.js"],
+        "js": ["contentScripts/addPlaceToList.js"],
         "matches": ["https://www.google.com/maps/search/*"],
         "run_at": "document_start"
     }]

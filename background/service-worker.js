@@ -5,8 +5,6 @@ chrome.runtime.onMessage.addListener(
         const ARTICLE_TO_PLACES_MAP = JSON.parse(STRINGIFIED_ARTICLE_TO_PLACES_MAP);
         const currentMessage = message.message;
 
-        console.log("Received message: ", currentMessage);
-        
         if (currentMessage === "addListToGoogleMaps") {
             console.log("Creating Eater list in Google Maps");
             chrome.storage.local.set({"LIST_TO_CREATE": Object.keys(ARTICLE_TO_PLACES_MAP)[0]})
@@ -31,8 +29,6 @@ chrome.runtime.onMessage.addListener(
                     return;
                 }
 
-                console.log("CURRENT_GOOGLE_MAPS_LINK_INDEX", CURRENT_GOOGLE_MAPS_LINK_INDEX);
-                
                 chrome.storage.local.set({CURRENT_GOOGLE_MAPS_LINK_INDEX: CURRENT_GOOGLE_MAPS_LINK_INDEX})
                 currentLink = googleMapsLinks[CURRENT_GOOGLE_MAPS_LINK_INDEX]
             }
