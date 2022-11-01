@@ -40,6 +40,7 @@ window.addEventListener('load', async (event) => {
         await pollForCondition(() => document.querySelector("button[aria-label='Add a place']"))
     }
 
+    console.log("sending addPlacesToList message");
     chrome.runtime.sendMessage({
         message: "addPlacesToList"
     });

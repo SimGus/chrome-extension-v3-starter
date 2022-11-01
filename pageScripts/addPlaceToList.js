@@ -4,7 +4,6 @@ const pollForCondition = (pollFn, validateFn = (result) => !!result, interval = 
     const executePoll = async (resolve, reject) => {
       const result = await pollFn();
       attempts = attempts + 1;
-      console.log(attempts);
   
       if (validateFn(result)) {
         return resolve(result);
