@@ -13,7 +13,7 @@
         "default_title": "Eater to Google Maps",
         "default_popup": "popup/popup.html"
     },
-    "permissions": ["storage", "tabs"],
+    "permissions": ["storage"],
     "host_permissions": [],
     "background": {
         "service_worker": "background/service-worker.js"
