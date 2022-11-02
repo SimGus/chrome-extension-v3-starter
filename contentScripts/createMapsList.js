@@ -24,7 +24,7 @@ window.addEventListener('load', async (event) => {
     const LIST_NAME = LIST_TO_CREATE["LIST_TO_CREATE"];
 
     const listExists = Array.from(document.querySelectorAll("span")).some(node => node.innerHTML.toString().includes(LIST_NAME));
-    
+
     if (LIST_NAME && !listExists) {
         const addListButton = await pollForCondition(() => document.querySelector('[aria-label="New list"]'));
         addListButton.click();

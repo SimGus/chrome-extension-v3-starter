@@ -13,7 +13,7 @@ button.addEventListener("click", async () => {
     const googleMapsLinkURLs = Array.from(googleMapsLinks).map((link) => link.href)
     
     // Get the title of the article so we can use it for the name of the Google Maps list
-    const articleTitle = document.querySelector('#content > section:nth-child(1) > div.c-mapstack__lede-image > div.c-mapstack__headline-wrap > div > h1').innerHTML
+    const articleTitle = document.querySelector('#content > section:nth-child(1) > div.c-mapstack__lede-image > div.c-mapstack__headline-wrap > div > h1').innerHTML.trim();
 
     const localStorageDict = {
         [articleTitle]: googleMapsLinkURLs
