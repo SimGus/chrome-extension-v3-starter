@@ -1,0 +1,11 @@
+.screening-events-item-header-interviewers {
+  filter: blur(6px);
+}
+
+.screening-events-item-header-interviewers:hover {
+  animation: blur-fadein 0.3s linear forwards;
+}
+
+@keyframes blur-fadein {
+	100% { filter: blur(0); }
+}
