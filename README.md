@@ -11,5 +11,6 @@ HRMOS の評価者が記入した評価がいきなり目に飛び込んでく�
 
 # 使い方
 
-1. このリポジトリをクローンして下さい
-2. https://setup-lab.net/chrome-extended-local-install/ これを見ながら頑張って下さい
+1. https://github.com/iwasa-kosui/hxmos/archive/refs/heads/master.zip からダウンロードして下さい
+1. ダウンロードした ZIP ファイルを解凍して下さい
+2. https://setup-lab.net/chrome-extended-local-install/ このドキュメントに従ってインストールして下さい
