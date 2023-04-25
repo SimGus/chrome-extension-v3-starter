@@ -1,4 +1,11 @@
-# HXMOS
+<div align="center">
+    <img src="https://raw.githubusercontent.com/iwasa-kosui/hrmos-blur-chrome-extension/master/logo/logo-128.png"/>
+    <h1>HXMOS</h1>
+    <h3>HRMOS の評価者が記入した評価をぼやかします</h3>
+</div>
+
+
+# 
 
 <center><img src="./logo/logo-128.png" /></center>
 
