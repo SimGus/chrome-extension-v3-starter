@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "HXMOS",
-    "description": "評価者の入力した評価をぼやかします",
+    "description": "Blur specific contents in HR management system HRMOS. 採用管理システム HRMOS 上の特定のコンテンツをぼかして表示します。",
     "version": "0.0.1",
     "icons": {
         "16": "logo/logo-16.png",
