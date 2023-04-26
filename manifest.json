@@ -8,9 +8,9 @@
         "48": "logo/logo-48.png",
         "128": "logo/logo-128.png"
     },
-    "permissions": [],
+    "host_permissions": ["*://hrmos.co/*"],
     "content_scripts": [{
-        "css": ["hrmos-blur.css"],
-        "matches": ["https://hrmos.co/*"]
+        "css": ["hxmos.css"],
+        "matches": ["*://hrmos.co/*"]
     }]
 }
