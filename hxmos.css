@@ -1,11 +1,46 @@
-.screening-events-item-header-interviewers {
+.screening-events-item-header-interviewers,
+.hxmos-blur {
   filter: blur(6px);
 }
 
-.screening-events-item-header-interviewers:hover {
-  animation: blur-fadein 0.3s linear forwards;
+.screening-events-item-header-interviewers:hover,
+.hxmos-blur:hover {
+  animation: blur-fadein 2s linear forwards;
+}
+
+.screening-events .hxmos-blur {
+  max-height: 100px !important;
+  overflow: hidden;
+  overflow-y: hidden;
+  display: block;
 }
 
 @keyframes blur-fadein {
-	100% { filter: blur(0); }
+  100% {
+    filter: blur(0);
+  }
+}
+
+.hxmos-show-button {
+  background-color: #005a96;
+  color: #fff;
+  line-height: 35px;
+  height: 35px;
+  padding: 0 20px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.hxmos-show-button-container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hxmos-parent {
+  position: relative;
 }

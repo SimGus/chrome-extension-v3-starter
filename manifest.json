@@ -11,6 +11,7 @@
     "host_permissions": ["*://hrmos.co/*"],
     "content_scripts": [{
         "css": ["hxmos.css"],
+        "js": ["hxmos.js"],
         "matches": ["*://hrmos.co/*"]
     }]
 }
