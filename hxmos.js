@@ -3,11 +3,15 @@ const update = () => {
     .from(document.querySelectorAll('.timeline-events-item-title'))
     .filter(elem => elem.innerText.includes('評価'))
 
+  const evaluationSummaryItems = Array
+    .from(document.querySelectorAll('.evaluation-summary'))
+    .filter(elem => elem.innerText.includes('総合評価'))
+
   const screeningEventItems = Array
     .from(document.querySelectorAll('.screening-event-content-detail-table td'))
     .filter(elem => elem.innerText.includes('総合評価'))
 
-  const elems = [...timelineItems, ...screeningEventItems]
+  const elems = [...timelineItems, ...evaluationSummaryItems, ...screeningEventItems]
     .filter(elem => !(elem.classList?.contains('hxmos-blur')) && !(elem.classList?.contains('hxmos-show')))
 
   const createButton = (elem) => {
@@ -56,7 +60,6 @@ const observer = new MutationObserver((muts) => {
 observer.observe(document.body, {
   attributes: true,
   attributeOldValue: true,
-  attributeFilter: ['href'],
   childList: true,
   characterData: false,
   subtree: true
