@@ -72,7 +72,7 @@ const onPanelExpanded = (mut) => {
 const observer = new MutationObserver((muts) => {
   const updated = muts.some((mut) => onPanelExpanded(mut) || onEventsRendered(mut))
   if (updated) {
-    setTimeout(() => update(), 300)
+    update()
   }
 })
 
