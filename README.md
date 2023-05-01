@@ -1,18 +1,25 @@
-<div align="center">
-    <img src="https://raw.githubusercontent.com/iwasa-kosui/hrmos-blur-chrome-extension/master/logo/logo-128.png"/>
-    <h3>HRMOS の評価者が記入した評価をぼやかします</h3>
-</div>
+<p align="center">
+<img src="https://raw.githubusercontent.com/iwasa-kosui/hrmos-blur-chrome-extension/master/logo/logo-128.png"/><br />HRMOS  の評価入力でお困りの方にピッタリの<br />Google Chrome 拡張機能
+</p>
 
-https://sites.google.com/kosui.me/hxmos
+![](./docs/screenshot.png)
+# はじめての方へ
 
-# HXMOS とは
+- [chrome ウェブストア](https://chrome.google.com/webstore/detail/hxmos/pcfpmfdckhdbcmbbhlmfheplnoilehhd?hl=ja) からダウンロードできます。
+- [公式サイト](https://sites.google.com/kosui.me/hxmos)
 
-HRMOS の評価者が記入した評価がいきなり目に飛び込んでくることがあります。これをデフォルトでぼやけさせ、マウスをホバーさせた時だけ表示されるようにします。
+# HRMOS の評価入力でお困りの方へ
 
-![](./screenshot.png)
+Google Chrome 拡張機能「HXMOS」は、採用管理システム「HRMOS」利用時のこんな悩みを解決します。
 
-# 使い方
+### 😭 従来
 
-1. https://github.com/iwasa-kosui/hxmos/archive/refs/heads/master.zip からダウンロードして下さい
-1. ダウンロードした ZIP ファイルを解凍して下さい
-2. https://setup-lab.net/chrome-extended-local-install/ このドキュメントに従ってインストールして下さい
+いきなり他の人の評価結果が表示され、評価入力時にバイアスがかかってしまいます。
+
+![before](./docs/before.png)
+
+### ✨ HXMOS 導入後
+
+ワンクッションが置かれているため、自分のタイミングで他の人の評価結果を閲覧できます。
+
+![before](./docs/before.png)
