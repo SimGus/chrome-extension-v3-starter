@@ -1,47 +1,85 @@
-.screening-events-item-header-interviewers,
-.hxmos-blur {
-  filter: blur(6px);
+.hxmos-blur-container .hxmos-blurable {
+  filter: blur(6px) grayscale(100%);
 }
 
-.screening-events-item-header-interviewers:hover,
-.hxmos-blur:hover {
-  animation: blur-fadein 2s linear forwards;
-}
-
-.screening-events .hxmos-blur {
+.hxmos-blur-container .screening-events pre {
   max-height: 100px !important;
   overflow: hidden;
-  overflow-y: hidden;
-  display: block;
 }
 
-@keyframes blur-fadein {
-  100% {
-    filter: blur(0);
-  }
-}
-
-.hxmos-show-button {
-  background-color: #005a96;
-  color: #fff;
-  line-height: 35px;
-  height: 35px;
-  padding: 0 20px;
+.hxmos-toggle-button-container {
+  min-width: 320px;
   text-align: center;
-  border-radius: 4px;
-}
-
-.hxmos-show-button-container {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  width: max-content;
-  height: max-content;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.hxmos-parent {
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: center;
+  white-space: nowrap;
   position: relative;
+  flex: 1;
+}
+
+.hxmos-sticky-toggle-button {
+  display: none;
+}
+
+.hxmos-sticky-toggle-button-visible.hxmos-sticky-toggle-button {
+  display: inline-block;
+}
+
+.hxmos-sticky-toggle-button-container {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  z-index: 10000;
+}
+
+label.hxmos-toggle-button {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+label.hxmos-toggle-button input {
+  display: none;
+}
+
+label.hxmos-toggle-button .hxmos-switcher {
+  width: 64px;
+  height: 32px;
+  background: #fff;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  border: 2px solid #0d5a96;
+}
+
+label.hxmos-toggle-button .hxmos-switcher::before {
+  display: block;
+  content: "";
+  background: #0d5a96;
+  width: 26px;
+  height: 26px;
+  border-radius: 14px;
+  margin: 0 2px;
+  transition: transform .3s;
+}
+
+label.hxmos-toggle-button:has(:checked) .hxmos-switcher {
+  background: #0d5a96;
+}
+
+label.hxmos-toggle-button:has(:checked) .hxmos-switcher::before {
+  transform: translateX(30px);
+  transition: transform .3s;
+  background: #fff;
+}
+
+label.hxmos-toggle-button:has(:checked) .hxmos-toggle-button-caption-off,
+label.hxmos-toggle-button .hxmos-toggle-button-caption-on {
+  display: none;
+}
+label.hxmos-toggle-button:has(:checked) .hxmos-toggle-button-caption-on,
+label.hxmos-toggle-button .hxmos-toggle-button-caption-off {
+  display: inline;
+  font-weight: bold;
 }
