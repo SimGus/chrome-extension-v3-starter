@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "HXMOS",
     "description": "Blur specific contents in HR management system HRMOS. 採用管理システム HRMOS 上の特定のコンテンツをぼかして表示します。",
-    "version": "0.0.3",
+    "version": "0.1.0",
     "icons": {
         "16": "logo/logo-16.png",
         "48": "logo/logo-48.png",
