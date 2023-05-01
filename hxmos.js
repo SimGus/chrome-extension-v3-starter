@@ -35,23 +35,42 @@ const update = () => {
     })
 }
 
-const observer = new MutationObserver((muts) => {
-  const updated = muts.some((mut) => {
-    if (mut.type !== 'childList') {
+/**
+ * 
+ * @param {MutationRecord} mut
+ */
+const onEventsRendered = (mut) => {
+  if (mut.type !== 'childList') {
+    return false
+  }
+
+  const nodes = Array.from(mut.addedNodes)
+  return nodes.some(node => {
+    if (node?.getAttribute == null) {
       return false
     }
-    const nodes = Array.from(mut.addedNodes)
-    return nodes.some(node => {
-      if (node?.getAttribute == null) {
-        return false
-      }
-      const nodeClassAttr = node.getAttribute('class')
-      if (nodeClassAttr == null) {
-        return false
-      }
-      return nodeClassAttr.includes('timeline-events') || nodeClassAttr.includes('screening-events')
-    })
+    const nodeClassAttr = node.getAttribute('class')
+    if (nodeClassAttr == null) {
+      return false
+    }
+    return nodeClassAttr.includes('timeline-events') || nodeClassAttr.includes('screening-events')
   })
+}
+
+/**
+ * 
+ * @param {MutationRecord} mut
+ */
+const onPanelExpanded = (mut) => {
+  if (mut.type !== 'attributes') {
+    return false
+  }
+
+  return Array.from(mut.target?.classList ?? []).includes('mat-expansion-panel-content')
+}
+
+const observer = new MutationObserver((muts) => {
+  const updated = muts.some((mut) => onPanelExpanded(mut) || onEventsRendered(mut))
   if (updated) {
     setTimeout(() => update(), 300)
   }
